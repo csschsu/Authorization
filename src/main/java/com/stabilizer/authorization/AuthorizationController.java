@@ -1,6 +1,8 @@
 package com.stabilizer.authorization;
 
 
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import io.swagger.tmf632.model.*;
@@ -17,4 +19,11 @@ public class AuthorizationController {
         pr.name("administrator");
         return "Hello World " + individ.getFamilyName() + " " + pr.getName();
     }
+    @PostMapping("/createparty")
+    public String createParty(@RequestBody String familyName) {
+        Individual individ = new Individual();
+        individ.setFamilyName(familyName);
+        return "Hello " + individ.getFamilyName() +"\n";
+    }
+
 }
