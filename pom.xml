@@ -15,6 +15,9 @@
     <description>Authorization</description>
     <properties>
         <java.version>11</java.version>
+        <mongodb-driver-sync.version>4.6.1</mongodb-driver-sync.version>
+        <mongodb-crypt.version>1.4.1</mongodb-crypt.version>
+        <logback-classic.version>1.2.11</logback-classic.version>
     </properties>
     <dependencies>
         <dependency>
@@ -37,6 +40,27 @@
             <artifactId>swagger-java-tmf669</artifactId>
             <version>1.0.0</version>
         </dependency>
+        <dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>mongo-java-driver</artifactId>
+            <version>3.12.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>mongodb-driver-sync</artifactId>
+            <version>${mongodb-driver-sync.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>mongodb-crypt</artifactId>
+            <version>${mongodb-crypt.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>${logback-classic.version}</version>
+        </dependency>
+
     </dependencies>
 
     <build>
